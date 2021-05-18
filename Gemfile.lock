@@ -1,0 +1,25 @@
+PATH
+  remote: .
+  specs:
+    game_finder (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    nokogiri (1.11.3-x86_64-linux)
+      racc (~> 1.4)
+    open-uri (0.1.0)
+    racc (1.5.2)
+    rake (13.0.3)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  game_finder!
+  nokogiri
+  open-uri
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.2.3

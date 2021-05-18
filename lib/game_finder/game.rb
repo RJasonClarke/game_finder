@@ -1,19 +1,21 @@
-class GameFinder::Game
+require_relative "./cli"
 
-    attr_accessor :title, :platform, :date
+class Game
+
+    attr_accessor :title, :critic, :user, :description
 
     @@all = []
 
-    def initialize
-        @@all << self
-    end
+  def initialize
+    @@all << self
+  end
 
-    def self.all
-        @all
-    end
+  def self.all
+    @@all.reverse
+  end
 
-    def self_reset_all
-        @@all.clear
-    end
+  def self.reset_all
+    @@all.clear
+  end
 
 end

@@ -1,30 +1,51 @@
-class GameFinder::CLI
+require_relative "./game.rb"
+
+class CLI
 
     def call
-        puts "-----------------------"
-        puts "Welcome to Game Finder!"
-        puts "-----------------------"     
+        puts ""
+        puts "-----------------------\nWelcome to Game Finder!\n-----------------------"
+        puts ""    
         menu
     end
 
-    def list_games
-        
+    def list_all_games
+        puts "------------------------------------------------"
+        puts "BEST GAMES OF ALL TIME BASED ON METACRITIC SCORE"
+        puts "------------------------------------------------"
+        Scraper.new.print_games
+        puts ""
+        more_info
+        menu
     end
 
     def menu
-        input = nil
-        while input != "exit"
-            puts "Enter game title or type exit"
-            input = gets.chomp.downcase
-            case input
-            when "zelda"
-                puts "\n--------\nZelda\n--------\nN64\n--------\nOctober 14 1994\n--------"
-            end
+        puts "Press ENTER to see all games or type EXIT"
+        input = gets.chomp.downcase
+        if input == ""
+            list_all_games
+        else input == "exit"
+            goodbye
         end
     end
 
+    def more_info
+        puts "Enter a games rank for more info"
+        rank = gets.strip.to_i - 1
+
+        game = Game.all[rank]
+        puts ""
+        puts "#{game.title}"
+        puts "---------------------------------"
+        puts "#{game.description}"
+        puts ""
+    end
+
     def goodbye
+        puts ""
         puts "Thank you for using Game Finder!"
+        exit!
     end
 
 end
+
