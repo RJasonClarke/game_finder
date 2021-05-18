@@ -1,8 +1,6 @@
 # GameFinder
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/game_finder`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+GameFinder is a gem used to scrape info from a Business Insider page listing the best games of all time based on Metacritic rank.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installing your gem, go to your terminal and enter "./bin/game-finder" without the quotation.
 
 ## Development
 
