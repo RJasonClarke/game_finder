@@ -40,7 +40,7 @@ class Scraper
         Game.all.each do |game|
             if game.title && game.title != ""
                 puts "#{game.title}"
-                puts "---------------------------------"
+                puts "----------------------------------"
                 puts "     Critic review:#{game.critic}"
                 puts "     User review:#{game.user}"
                 puts ""
