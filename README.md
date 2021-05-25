@@ -1,6 +1,6 @@
 # game_finder
 
-GameFinder is a gem used to scrape info from a Business Insider page listing the best games of all time based on Metacritic rank.
+GameFinder is an app used to scrape info from a Business Insider page that lists the best games of all time based on Metacritic score.
 
 ## Installation
 
